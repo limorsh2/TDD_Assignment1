@@ -1,8 +1,8 @@
+import BubblesSort
 
 
-choose = 0
-while choose != 1 or choose !=2:
-    choose = input("press 1 for IBM function or 2 for Bubble sort")
+while choose != 1 and choose != 2:
+    choose = int(input("press 1 for IBM function or 2 for Bubble sort: "))
 
 if choose == 1:
     height = input("Enter height: ")
@@ -14,8 +14,8 @@ else:
     for i in range(0, n):
         ele = int(input())
         lst.append(ele)
-    print(BubbleSort(ist))
-    
+    print(BubblesSort.bubble_sort(lst))
+
 
 
 
