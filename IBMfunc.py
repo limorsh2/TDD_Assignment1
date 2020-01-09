@@ -1,17 +1,14 @@
 import unittest
 
-class BmI:
-    height=0
-    weight=0
 
-    def BMI(height,weight):
-        tmp_bmi=weight/(height*height)
-        if(tmp_bmi<18.5):
-            return 'Underweight'
-        elif(tmp_bmi>18.5 and tmp_bmi<25):
-            return 'Proper weight'
-        else: #tmp_bmi>25
-            return 'Overweight'
+def BMI(height,weight):
+    tmp_bmi=weight/(height*height)
+    if(tmp_bmi<18.5):
+        return 'Underweight'
+    elif(tmp_bmi>18.5 and tmp_bmi<25):
+        return 'Proper weight'
+    else: #tmp_bmi>25
+        return 'Overweight'
 
 class BMITest(unittest.TestCase):
     def test_BMI(self):
@@ -29,9 +26,9 @@ class BMITest(unittest.TestCase):
         expected3='Overweight'
 
         #action
-        result1 =BmI.BMI(h1,w1)
-        result2 =BmI.BMI(h2,w2)
-        result3 =BmI.BMI(h3,w3)
+        result1 =BMI(h1,w1)
+        result2 =BMI(h2,w2)
+        result3 =BMI(h3,w3)
 
         # expect/assert
         self.assertEqual(result1,expected1)
