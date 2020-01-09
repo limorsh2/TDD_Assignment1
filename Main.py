@@ -1,6 +1,6 @@
 
 
-choose = 0
+choose = 9
 while choose != 1 or choose !=2:
     choose = input("press 1 for IBM function or 2 for Bubble sort")
 
@@ -14,8 +14,8 @@ else:
     for i in range(0, n):
         ele = int(input())
         lst.append(ele)
-    print(BubbleSort(ist))
-    
+    print(bubble_sort(lst))
+
 
 
 
