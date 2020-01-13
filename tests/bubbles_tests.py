@@ -1,14 +1,5 @@
 import unittest
-
-
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-    return arr
-
+from src import BubblesSort
 
 class BubblesSortTest(unittest.TestCase):
     def test_bubble_sort(self):
@@ -27,11 +18,11 @@ class BubblesSortTest(unittest.TestCase):
         expected5 = [-9, -7, 6, 9]
 
         # action
-        result1 = bubble_sort(stub1)
-        result2 = bubble_sort(stub2)
-        result3 = bubble_sort(stub3)
-        result4 = bubble_sort(stub4)
-        result5 = bubble_sort(stub5)
+        result1 = BubblesSort.bubble_sort(stub1)
+        result2 = BubblesSort.bubble_sort(stub2)
+        result3 = BubblesSort.bubble_sort(stub3)
+        result4 = BubblesSort.bubble_sort(stub4)
+        result5 = BubblesSort.bubble_sort(stub5)
 
         # expect/assert
         self.assertIsNotNone(result1)
